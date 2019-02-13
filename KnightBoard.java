@@ -35,10 +35,24 @@ public class KnightBoard{
   }
 
   public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+    int num = 0;
+    boolean taken = true;
+    while(taken){
+    try{
+    System.out.println("Input a size: ");
+	  num = in.nextInt();
+    taken = false;
+  } catch(InputMismatchException e){
+    System.out.println("Please input a number!");
+    in.next();
+  }
+}
     System.out.println("Welcome to KnightBoard!!!");
     System.out.println("------------------------------");
     System.out.println("Chose one of the following options: ");
     System.out.prinltn("1. Print the puzzle");
+
   }
 
 }
