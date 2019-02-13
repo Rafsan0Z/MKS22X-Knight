@@ -53,12 +53,16 @@ public class KnightBoard{
     in.next();
   }
 }
-    KnightBoard puzzle =
+    KnightBoard puzzle = new KnightBoard(num1,num2);
     System.out.println("Welcome to KnightBoard!!!");
     System.out.println("------------------------------");
     System.out.println("Chose one of the following options: ");
     System.out.prinltn("1. Print the puzzle");
-
+    System.out.println("------------------------------");
+    int option = in.nextInt();
+    boolean running = true;
+    while(running){
+    try{}
   }
 
 }
