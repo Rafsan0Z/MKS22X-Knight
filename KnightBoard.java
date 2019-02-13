@@ -17,6 +17,8 @@ public class KnightBoard{
   }
 
   private boolean outBounds(int row, int col){
+    if(row >= length || col >= width){return false;}
+    else if(row < 0 || col < 0){return false;}
     return true;
   }
 
