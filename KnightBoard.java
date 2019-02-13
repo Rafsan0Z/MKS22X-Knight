@@ -22,7 +22,7 @@ public class KnightBoard{
     return true;
   }
 
-  private void KnightMove(int row, int col, String direction){
+  private void KnightMove(int row, int col, int Knightnum, String direction){
     if(direction.equals("up")){
       int newrow = row - 3;
       int newcol = col + 1;
