@@ -7,6 +7,7 @@ public class KnightBoard{
     if(startingrow < 0 || startingcol < 0){
       throw new IllegalArgumentException();
     }
+    board = new int[startingrow][startingcol];
   }
 
   public boolean solve(int startingrow, int startingcol){
