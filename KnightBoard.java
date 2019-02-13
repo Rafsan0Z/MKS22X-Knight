@@ -23,10 +23,15 @@ public class KnightBoard{
   }
 
   private void KnightMove(int row, int col, int Knightnum, String direction){
-    if(direction.equals("up")){
+    if(direction.equals("upright")){
       int newrow = row - 3;
       int newcol = col + 1;
-      if(inBounds(newrow,newcol)){}
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+    }
+    else if(direction.equals("downright")){
+      int newrow = row + 3;
+      int newcol = col + 1;
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
     }
   }
 
