@@ -12,6 +12,12 @@ public class KnightBoard{
     board = new int[startingrow][startingcol];
   }
 
+  private void KnightMove(int row, int col, String direction){
+    if(direction.equals("up")){
+
+    }
+  }
+
   public boolean solve(int startingrow, int startingcol){
     return true;
   }
