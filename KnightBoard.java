@@ -9,5 +9,8 @@ public class KnightBoard{
     return true;
   }
 
+  public int countSolutions(int startingrow, int startingcol){
+    return 0;
+  }
 
 }
