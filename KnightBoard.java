@@ -13,4 +13,9 @@ public class KnightBoard{
     return 0;
   }
 
+  public String toString(){
+    String result = "";
+    return result;
+  }
+
 }
