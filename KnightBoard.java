@@ -12,6 +12,10 @@ public class KnightBoard{
     board = new int[startingrow][startingcol];
   }
 
+  private boolean outBounds(int row, int col){
+    return true;
+  }
+
   private void KnightMove(int row, int col, String direction){
     if(direction.equals("up")){
 
