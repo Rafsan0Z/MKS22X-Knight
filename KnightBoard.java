@@ -13,6 +13,10 @@ public class KnightBoard{
     return 0;
   }
 
+  private boolean solveHelper(int row, int col, int level){
+    return false;
+  }
+
   public String toString(){
     String result = "";
     return result;
