@@ -1,3 +1,5 @@
+import java.util.IllegalArgumentException;
+import java.util.Scanner;
 public class KnightBoard{
 
   private int[][] board;
