@@ -43,6 +43,16 @@ public class KnightBoard{
       int newcol = col - 1;
       if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
     }
+    else if(direction.equals("rightup")){
+      int newrow = row - 1;
+      int newcol = col + 3;
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+    }
+    else if(direction.equals("rightdown")){
+      int newrow = row + 1;
+      int newcol = col + 3;
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+    }
   }
 
   public boolean solve(int startingrow, int startingcol){
