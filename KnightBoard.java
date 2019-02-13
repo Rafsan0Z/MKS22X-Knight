@@ -38,18 +38,22 @@ public class KnightBoard{
 
   public static void main(String[] args){
     Scanner in = new Scanner(System.in);
-    int num = 0;
+    int num1 = 0;
+    int num2 = 0;
     boolean taken = true;
     while(taken){
     try{
-    System.out.println("Input a size: ");
-	  num = in.nextInt();
+    System.out.println("Input a length: ");
+	  num1 = in.nextInt();
+    System.out.println("Input a width: ");
+	  num2 = in.nextInt();
     taken = false;
   } catch(InputMismatchException e){
     System.out.println("Please input a number!");
     in.next();
   }
 }
+    KnightBoard puzzle =
     System.out.println("Welcome to KnightBoard!!!");
     System.out.println("------------------------------");
     System.out.println("Chose one of the following options: ");
