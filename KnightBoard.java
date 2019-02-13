@@ -16,7 +16,7 @@ public class KnightBoard{
     width = startingcol;
   }
 
-  private boolean outBounds(int row, int col){
+  private boolean inBounds(int row, int col){
     if(row >= length || col >= width){return false;}
     else if(row < 0 || col < 0){return false;}
     return true;
@@ -24,7 +24,9 @@ public class KnightBoard{
 
   private void KnightMove(int row, int col, String direction){
     if(direction.equals("up")){
-
+      int newrow = row - 3;
+      int newcol = col + 1;
+      if(inBounds(newrow,newcol)){}
     }
   }
 
