@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class KnightBoard{
 
   private int[][] board;
+  private int length;
+  private int width;
   private int Solutions;
 
   public KnightBoard(int startingrow, int startingcol){
@@ -10,6 +12,8 @@ public class KnightBoard{
       throw new IllegalArgumentException();
     }
     board = new int[startingrow][startingcol];
+    length = startingrow;
+    width = startingcol;
   }
 
   private boolean outBounds(int row, int col){
