@@ -5,5 +5,9 @@ public class KnightBoard{
 
   public KnightBoard(int startingrow, int startingcol){}
 
+  public boolean solve(int startingrow, int startingcol){
+    return true;
+  }
+
 
 }
