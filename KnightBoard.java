@@ -24,6 +24,11 @@ public class KnightBoard{
 
   public String toString(){
     String result = "";
+    for(int i = 0; i < startingrow; i++){
+      for(int j = 0; j < startingcol; j++){
+        result += board[i][j] + ",";
+      }
+    }
     return result;
   }
 
