@@ -26,8 +26,10 @@ public class KnightBoard{
     String result = "";
     for(int i = 0; i < startingrow; i++){
       for(int j = 0; j < startingcol; j++){
-        result += board[i][j] + ",";
+        if(board[i][j] == 0){result += "__ ";}
+        else{result += board[i][j] + " ";}
       }
+      result += "\n";
     }
     return result;
   }
