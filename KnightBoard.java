@@ -3,7 +3,11 @@ public class KnightBoard{
   private int[][] board;
   private int Solutions;
 
-  public KnightBoard(int startingrow, int startingcol){}
+  public KnightBoard(int startingrow, int startingcol){
+    if(startingrow < 0 || startingcol < 0){
+      throw new IllegalArgumentException();
+    }
+  }
 
   public boolean solve(int startingrow, int startingcol){
     return true;
