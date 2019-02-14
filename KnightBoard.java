@@ -84,19 +84,28 @@ public class KnightBoard{
     Scanner in = new Scanner(System.in);
     int num1 = 0;
     int num2 = 0;
-    boolean taken = true;
-    while(taken){
+    boolean taken1 = true;
+    boolean taken2 = true;
+    while(taken1){
     try{
     System.out.println("Input a length: ");
 	  num1 = in.nextInt();
-    System.out.println("Input a width: ");
-	  num2 = in.nextInt();
-    taken = false;
-  } catch(InputMismatchException e){
-    System.out.println("Please input a number!");
-    in.next();
-  }
-}
+    taken1 = false;
+  }catch(InputMismatchException e){
+     System.out.println("Please input a number!");
+     in.next();
+   }
+ }
+ while(taken2){
+   try{
+   System.out.println("Input a width: ");
+   num2 = in.nextInt();
+   taken2 = false;
+  }catch(InputMismatchException e){
+     System.out.println("Please input a number!");
+     in.next();
+   }
+ }
     KnightBoard puzzle = new KnightBoard(num1,num2);
     System.out.println("Welcome to KnightBoard!!!");
     System.out.println("------------------------------");
