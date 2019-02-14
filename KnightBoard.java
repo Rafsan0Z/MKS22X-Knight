@@ -129,7 +129,7 @@ public class KnightBoard{
     System.out.println("Chose one of the following options: ");
     System.out.println("1. Print the puzzle");
     System.out.println("2. Add a Knight");
-    System.out.println("3. Remove a Knight");    
+    System.out.println("3. Remove a Knight");
     System.out.println("4. Find a tour");
     System.out.println("5. Find a semi-magic tour");
     System.out.println("6. Find a magic tour");
@@ -147,15 +147,14 @@ public class KnightBoard{
       option = in.nextInt();
   	}
     else if(option == 2){
-      System.out.println("Not Yet Ready!");
+  		System.out.println("Input a row number: ");
+  		int row = in.nextInt() - 1;
+  		System.out.println("Input a column number: ");
+  		int col = in.nextInt() - 1;
+  		puzzle.addKnight(row,col);
       System.out.println("Chose another Option: ");
       option = in.nextInt();
-    }
-    else if(option == 3){
-      System.out.println("Not Yet Ready!");
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-    }
+  	}
     else if(option == 4){
       System.out.println("Not Yet Ready!");
       System.out.println("Chose another Option: ");
@@ -167,6 +166,16 @@ public class KnightBoard{
       option = in.nextInt();
     }
     else if(option == 6){
+      System.out.println("Not Yet Ready!");
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
+    }
+    else if(option == 7){
+      System.out.println("Not Yet Ready!");
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
+    }
+    else if(option == 8){
       running = false;
     }
     else{
