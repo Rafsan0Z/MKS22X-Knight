@@ -150,6 +150,11 @@ public class KnightBoard{
     else if(option == 6){
       running = false;
     }
+    else{
+      System.out.println("Invalid option!");
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
+    }
   }catch(InputMismatchException e){
     System.out.println("Please input a number!");
     in.next();
