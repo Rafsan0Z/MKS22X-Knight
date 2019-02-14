@@ -160,7 +160,9 @@ public class KnightBoard{
   		int row = in.nextInt() - 1;
   		System.out.println("Input a column number: ");
   		int col = in.nextInt() - 1;
-  		puzzle.removeKnight(row,col);
+  		if(!puzzle.removeKnight(row,col)){
+        System.out.println("No Knight There!");
+      }
       System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
