@@ -1,4 +1,4 @@
-import java.util.IllegalArgumentException;
+//import java.util.IllegalArgumentException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class KnightBoard{
@@ -101,7 +101,7 @@ public class KnightBoard{
     System.out.println("Welcome to KnightBoard!!!");
     System.out.println("------------------------------");
     System.out.println("Chose one of the following options: ");
-    System.out.prinltn("1. Print the puzzle");
+    System.out.println("1. Print the puzzle");
     System.out.println("------------------------------");
     int option = in.nextInt();
     boolean running = true;
