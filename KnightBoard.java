@@ -102,7 +102,11 @@ public class KnightBoard{
     System.out.println("------------------------------");
     System.out.println("Chose one of the following options: ");
     System.out.println("1. Print the puzzle");
-    System.out.println("2. Exit");    
+    System.out.println("2. Find a tour");
+    System.out.println("3. Find a semi-magic tour");
+    System.out.println("4. Find a magic tour");
+    System.out.println("5. Find total number of tours");
+    System.out.println("6. Exit");
     System.out.println("------------------------------");
     int option = in.nextInt();
     boolean running = true;
@@ -114,7 +118,7 @@ public class KnightBoard{
       System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
-    else if(option == 0){
+    else if(option == 6){
       running = false;
     }
   }catch(InputMismatchException e){
