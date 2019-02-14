@@ -7,6 +7,7 @@ public class KnightBoard{
   private int length;
   private int width;
   private int Solutions;
+  private int level;
 
   public KnightBoard(int startingrow, int startingcol){
     if(startingrow < 0 || startingcol < 0){
