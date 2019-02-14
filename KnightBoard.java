@@ -151,7 +151,9 @@ public class KnightBoard{
   		int row = in.nextInt() - 1;
   		System.out.println("Input a column number: ");
   		int col = in.nextInt() - 1;
-  		puzzle.addKnight(row,col);
+  		if(!puzzle.addKnight(row,col)){
+        System.out.println("Knight Already There!");
+      }
       System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
