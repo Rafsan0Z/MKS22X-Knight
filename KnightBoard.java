@@ -68,6 +68,14 @@ public class KnightBoard{
     return false;
   }
 
+  private boolean addKnight(int row, int col){
+    if(board[row][col] != 0){
+      return false;
+    }
+    board[row][col] += 1;
+    return true;
+  }
+
   public String toString(){
     String result = "";
     for(int i = 0; i < length; i++){
