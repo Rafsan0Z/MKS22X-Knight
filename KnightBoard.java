@@ -102,6 +102,7 @@ public class KnightBoard{
     System.out.println("------------------------------");
     System.out.println("Chose one of the following options: ");
     System.out.println("1. Print the puzzle");
+    System.out.println("2. Exit");    
     System.out.println("------------------------------");
     int option = in.nextInt();
     boolean running = true;
@@ -110,6 +111,7 @@ public class KnightBoard{
       if(option == 1){
   		String output = puzzle.toString();
       System.out.println(output);
+      System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
     else if(option == 0){
