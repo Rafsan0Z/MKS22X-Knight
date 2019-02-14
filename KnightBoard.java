@@ -24,36 +24,36 @@ public class KnightBoard{
     return true;
   }
 
-  private void KnightMove(int row, int col, int Knightnum, String direction){
+  private void KnightMove(int row, int col, String direction){
     if(direction.equals("upright")){
       int newrow = row - 3;
       int newcol = col + 1;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
     }
     else if(direction.equals("downright")){
       int newrow = row + 3;
       int newcol = col + 1;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
     }
     else if(direction.equals("upleft")){
       int newrow = row - 3;
       int newcol = col - 1;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
     }
     else if(direction.equals("downleft")){
       int newrow = row + 3;
       int newcol = col - 1;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
     }
     else if(direction.equals("rightup")){
       int newrow = row - 1;
       int newcol = col + 3;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
     }
     else if(direction.equals("rightdown")){
       int newrow = row + 1;
       int newcol = col + 3;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = Knightnum+1;}
+      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
     }
   }
 
@@ -73,7 +73,7 @@ public class KnightBoard{
     if(board[row][col] != 0){
       return false;
     }
-    board[row][col] += 1;
+    board[row][col] = level+1;
     return true;
   }
 
