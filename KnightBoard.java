@@ -128,11 +128,13 @@ public class KnightBoard{
     System.out.println("------------------------------");
     System.out.println("Chose one of the following options: ");
     System.out.println("1. Print the puzzle");
-    System.out.println("2. Find a tour");
-    System.out.println("3. Find a semi-magic tour");
-    System.out.println("4. Find a magic tour");
-    System.out.println("5. Find total number of tours");
-    System.out.println("6. Exit");
+    System.out.println("2. Add a Knight");
+    System.out.println("3. Remove a Knight");    
+    System.out.println("4. Find a tour");
+    System.out.println("5. Find a semi-magic tour");
+    System.out.println("6. Find a magic tour");
+    System.out.println("7. Find total number of tours");
+    System.out.println("8. Exit");
     System.out.println("------------------------------");
     int option = in.nextInt();
     boolean running = true;
