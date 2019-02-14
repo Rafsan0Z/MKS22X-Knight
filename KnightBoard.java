@@ -155,6 +155,15 @@ public class KnightBoard{
       System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
+    else if(option == 3){
+  		System.out.println("Input a row number: ");
+  		int row = in.nextInt() - 1;
+  		System.out.println("Input a column number: ");
+  		int col = in.nextInt() - 1;
+  		puzzle.removeKnight(row,col);
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
+  	}
     else if(option == 4){
       System.out.println("Not Yet Ready!");
       System.out.println("Chose another Option: ");
