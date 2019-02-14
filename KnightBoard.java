@@ -129,15 +129,23 @@ public class KnightBoard{
   	}
     else if(option == 2){
       System.out.println("Not Yet Ready!");
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
     }
     else if(option == 3){
       System.out.println("Not Yet Ready!");
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
     }
     else if(option == 4){
       System.out.println("Not Yet Ready!");
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
     }
     else if(option == 5){
       System.out.println("Not Yet Ready!");
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
     }
     else if(option == 6){
       running = false;
