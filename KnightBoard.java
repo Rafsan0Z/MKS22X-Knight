@@ -74,6 +74,14 @@ public class KnightBoard{
       return false;
     }
     board[row][col] = level+1;
+    level++;
+    return true;
+  }
+
+  private boolean removeKnight(int row, int col){
+    if(board[row][col] == 0){return false;}
+    board[row][col] = 0;
+    level--;
     return true;
   }
 
