@@ -105,7 +105,17 @@ public class KnightBoard{
     int option = in.nextInt();
     boolean running = true;
     while(running){
-    try{}
+    try{
+      if(option == 1){
+  		String output = puzzle.toString();
+      System.out.println(output);
+      option = in.nextInt();
+  	}
+  }catch(InputMismatchException e){
+    System.out.println("Please input a number!");
+    in.next();
+  }
   }
 
+}
 }
