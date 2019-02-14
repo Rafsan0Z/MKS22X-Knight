@@ -70,8 +70,8 @@ public class KnightBoard{
 
   public String toString(){
     String result = "";
-    for(int i = 0; i < startingrow; i++){
-      for(int j = 0; j < startingcol; j++){
+    for(int i = 0; i < length; i++){
+      for(int j = 0; j < width; j++){
         if(board[i][j] == 0){result += "__ ";}
         else{result += board[i][j] + " ";}
       }
