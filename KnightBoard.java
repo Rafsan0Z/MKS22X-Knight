@@ -111,6 +111,9 @@ public class KnightBoard{
       System.out.println(output);
       option = in.nextInt();
   	}
+    else if(option == 0){
+      running = false;
+    }
   }catch(InputMismatchException e){
     System.out.println("Please input a number!");
     in.next();
