@@ -85,6 +85,14 @@ public class KnightBoard{
     return true;
   }
 
+  private void clear(){
+    for(int i = 0; i < length; i++){
+      for(int j = 0; j < width; j++){
+        board[i][j] = 0;
+      }
+    }
+  }
+
   public String toString(){
     String result = "";
     for(int i = 0; i < length; i++){
