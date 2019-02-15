@@ -30,6 +30,7 @@ public class KnightBoard{
     ArrayList<Integer> result = new ArrayList<Integer>();
     for(int i = 0; i <= result.size(); i++){
       String coordinate = "(" + result.get(i) + ", " + result.get(i+1) + ")";
+      output += coordinate + " ";
     }
   }
 
