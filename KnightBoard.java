@@ -180,7 +180,7 @@ public class KnightBoard{
     System.out.println("4. Find a tour");
     System.out.println("5. Find a semi-magic tour");
     System.out.println("6. Find a magic tour");
-    System.out.println("7. Find total number of tours");
+    System.out.println("7. Find total number of Solutions");
     System.out.println("8. Exit");
     System.out.println("------------------------------");
     int option = in.nextInt();
