@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class KnightBoard{
 
   private int[][] board;
-  private int[][] MarkUp;
+  private int[][] Marks;
   private int length;
   private int width;
   private int Solutions;
@@ -24,6 +24,11 @@ public class KnightBoard{
     if(row >= length || col >= width){return false;}
     else if(row < 0 || col < 0){return false;}
     return true;
+  }
+
+  private void MarkUp(int row, int col){
+    if(inBounds(row-1,col+3)){Marks[row-1][col+3] += 1;}
+    if(inBounds(row-3,col+1)){Marks[row-3][col+1] += 1;}
   }
 
   // Make sure that there is a Knight in given position
