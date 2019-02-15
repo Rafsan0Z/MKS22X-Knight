@@ -8,7 +8,6 @@ public class KnightBoard{
   private int[][] Marks;
   private int length;
   private int width;
-  private int Solutions;
   private int level;
 
   public KnightBoard(int startingrow, int startingcol){
