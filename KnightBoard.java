@@ -94,6 +94,16 @@ public class KnightBoard{
     return counter;
   }
 
+  public int CountAllSolutions(){
+    int counter;
+    for(int i = 0; i < length; i++){
+      for(int j = 0; j < width; j++){
+        counter += countSolutions(i,j);
+      }
+    }
+    return counter;
+  }
+
   private boolean solveHelper(int row, int col, int level){
     return false;
   }
