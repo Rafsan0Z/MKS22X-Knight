@@ -90,7 +90,8 @@ public class KnightBoard{
   }
 
   public int countSolutions(int startingrow, int startingcol){
-    return 0;
+    int counter = 0;
+    return counter;
   }
 
   private boolean solveHelper(int row, int col, int level){
