@@ -25,6 +25,11 @@ public class KnightBoard{
     return true;
   }
 
+  // Make sure that there is a Knight in given position
+  private String MoveCoordinates(int row, int col){
+
+  }
+
   private void KnightMove(int row, int col, String direction){
     if(direction.equals("upright")){
       int newrow = row - 3;
