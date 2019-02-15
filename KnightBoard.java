@@ -27,7 +27,10 @@ public class KnightBoard{
 
   // Make sure that there is a Knight in given position
   private String MoveCoordinates(int row, int col){
-
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    for(int i = 0; i <= result.size(); i++){
+      String coordinate = "(" + result.get(i) + ", " + result.get(i+1) + ")";
+    }
   }
 
   private void KnightMove(int row, int col, String direction){
