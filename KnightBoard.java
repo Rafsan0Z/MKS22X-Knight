@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class KnightBoard{
 
   private int[][] board;
+  private int[][] MarkUp;
   private int length;
   private int width;
   private int Solutions;
@@ -28,10 +29,12 @@ public class KnightBoard{
   // Make sure that there is a Knight in given position
   private String MoveCoordinates(int row, int col){
     ArrayList<Integer> result = new ArrayList<Integer>();
+    String output = "";
     for(int i = 0; i <= result.size(); i++){
       String coordinate = "(" + result.get(i) + ", " + result.get(i+1) + ")";
       output += coordinate + " ";
     }
+    return output;
   }
 
   private void KnightMove(int row, int col, String direction){
