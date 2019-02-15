@@ -26,6 +26,10 @@ public class KnightBoard{
     return true;
   }
 
+  public int getLevel(){
+    return level;
+  }
+
   private void MarkUp(int row, int col){
     if(inBounds(row-1,col+3)){Marks[row-1][col+3] += 1;}
     else if(inBounds(row-1,col-3)){Marks[row-1][col-3] += 1;}
