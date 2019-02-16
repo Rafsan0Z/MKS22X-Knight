@@ -89,12 +89,14 @@ public class KnightBoard{
   }
 
   public int countSolutions(int startingrow, int startingcol){
-    int counter = 0;
-    return counter;
+    counterHelper(1,startingrow,startingcol);
+    return Solutions;
   }
 
   public void counterHelper(int count, int row, int col){
-    
+    if(position == length*width){
+      Solutions++;
+    }
   }
 
   public int CountAllSolutions(){
