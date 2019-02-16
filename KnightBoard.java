@@ -6,6 +6,7 @@ public class KnightBoard{
 
   private int[][] board;
   private int[][] Marks;
+  private int[][] Moves;
   private int length;
   private int width;
   private int level;
@@ -93,7 +94,7 @@ public class KnightBoard{
     return Solutions;
   }
 
-  public void counterHelper(int count, int row, int col){
+  public void counterHelper(int position, int row, int col){
     if(position == length*width){
       Solutions++;
     }
