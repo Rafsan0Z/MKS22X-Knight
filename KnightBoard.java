@@ -93,6 +93,10 @@ public class KnightBoard{
     return counter;
   }
 
+  public void counterHelper(int count, int row, int col){
+    
+  }
+
   public int CountAllSolutions(){
     int counter;
     for(int i = 0; i < length; i++){
