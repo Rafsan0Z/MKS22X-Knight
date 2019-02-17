@@ -216,6 +216,12 @@ public class KnightBoard{
       System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
+    if(option == 2){
+      String output = puzzle.MarkstoString();
+      System.out.println(output);
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
+    }
     else if(option == 3){
   		System.out.println("Input a row number: ");
   		int row = in.nextInt() - 1;
