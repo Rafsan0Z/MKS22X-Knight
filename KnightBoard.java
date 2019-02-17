@@ -10,6 +10,7 @@ public class KnightBoard{
   private int length;
   private int width;
   private int level;
+  private int Solutions;
 
   public KnightBoard(int startingrow, int startingcol){
     if(startingrow < 0 || startingcol < 0){
@@ -105,7 +106,7 @@ public class KnightBoard{
   }
 
   public int CountAllSolutions(){
-    int counter;
+    int counter = 0;
     for(int i = 0; i < length; i++){
       for(int j = 0; j < width; j++){
         counter += countSolutions(i,j);
