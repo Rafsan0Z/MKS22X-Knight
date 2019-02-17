@@ -196,7 +196,8 @@ public class KnightBoard{
     System.out.println("Welcome to KnightBoard!!!");
     System.out.println("------------------------------");
     System.out.println("Chose one of the following options: ");
-    System.out.println("1. Print the puzzle");
+    System.out.println("1. Print the puzzle with numbers");
+    System.out.println("2. Print the puzzle with letters");
     System.out.println("2. Add a Knight");
     System.out.println("3. Remove a Knight");
     System.out.println("4. Find a tour");
