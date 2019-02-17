@@ -198,13 +198,13 @@ public class KnightBoard{
     System.out.println("Chose one of the following options: ");
     System.out.println("1. Print the puzzle with numbers");
     System.out.println("2. Print the puzzle with letters");
-    System.out.println("2. Add a Knight");
-    System.out.println("3. Remove a Knight");
-    System.out.println("4. Find a tour");
-    System.out.println("5. Find a semi-magic tour");
-    System.out.println("6. Find a magic tour");
-    System.out.println("7. Find total number of Solutions");
-    System.out.println("8. Exit");
+    System.out.println("3. Add a Knight");
+    System.out.println("4. Remove a Knight");
+    System.out.println("5. Find a tour");
+    System.out.println("6. Find a semi-magic tour");
+    System.out.println("7. Find a magic tour");
+    System.out.println("8. Find total number of Solutions");
+    System.out.println("9. Exit");
     System.out.println("------------------------------");
     int option = in.nextInt();
     boolean running = true;
@@ -216,7 +216,7 @@ public class KnightBoard{
       System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
-    else if(option == 2){
+    else if(option == 3){
   		System.out.println("Input a row number: ");
   		int row = in.nextInt() - 1;
   		System.out.println("Input a column number: ");
@@ -227,7 +227,7 @@ public class KnightBoard{
       System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
-    else if(option == 3){
+    else if(option == 4){
   		System.out.println("Input a row number: ");
   		int row = in.nextInt() - 1;
   		System.out.println("Input a column number: ");
@@ -238,11 +238,6 @@ public class KnightBoard{
       System.out.println("Chose another Option: ");
       option = in.nextInt();
   	}
-    else if(option == 4){
-      System.out.println("Not Yet Ready!");
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-    }
     else if(option == 5){
       System.out.println("Not Yet Ready!");
       System.out.println("Chose another Option: ");
@@ -259,6 +254,11 @@ public class KnightBoard{
       option = in.nextInt();
     }
     else if(option == 8){
+      System.out.println("Not Yet Ready!");
+      System.out.println("Chose another Option: ");
+      option = in.nextInt();
+    }
+    else if(option == 9){
       running = false;
     }
     else{
