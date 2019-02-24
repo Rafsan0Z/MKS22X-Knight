@@ -135,7 +135,7 @@ public class KnightBoard{
     return true;
   }
 
-  private void clear(){
+  private void clear(){ // clears the board of knights
     for(int i = 0; i < length; i++){
       for(int j = 0; j < width; j++){
         board[i][j] = 0;
@@ -143,7 +143,7 @@ public class KnightBoard{
     }
   }
 
-  public String MarkstoString(){
+  public String MarkstoString(){ // Marked by letter N for knight
     String result = "";
     for(int i = 0; i < length; i++){
       for(int j = 0; j < width; j++){
@@ -155,7 +155,7 @@ public class KnightBoard{
     return result;
   }
 
-  public String toString(){
+  public String toString(){ // Marked by integers for knight
     String result = "";
     for(int i = 0; i < length; i++){
       for(int j = 0; j < width; j++){
@@ -167,7 +167,7 @@ public class KnightBoard{
     return result;
   }
 
-  public static void main(String[] args){
+  public static void main(String[] args){ // this is where the program runs
     Scanner in = new Scanner(System.in);
     int num1 = 0;
     int num2 = 0;
