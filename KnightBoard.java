@@ -12,7 +12,7 @@ public class KnightBoard{
   private int level;
   private int Solutions;
 
-  public KnightBoard(int startingrow, int startingcol){
+  public KnightBoard(int startingrow, int startingcol){ // constructor
     if(startingrow < 0 || startingcol < 0){
       throw new IllegalArgumentException();
     }
@@ -25,13 +25,13 @@ public class KnightBoard{
 
   }
 
-  private boolean inBounds(int row, int col){
+  private boolean inBounds(int row, int col){ // checks if the knight is inside the Board
     if(row >= length || col >= width){return false;}
     else if(row < 0 || col < 0){return false;}
     return true;
   }
 
-  public int getLevel(){
+  public int getLevel(){ // returns the level, or the knight number
     return level;
   }
 
