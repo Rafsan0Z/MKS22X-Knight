@@ -119,7 +119,7 @@ public class KnightBoard{
     return false;
   }
 
-  private boolean addKnight(int row, int col){
+  private boolean addKnight(int row, int col){ // adding a knight at a row and column
     if(board[row][col] != 0){
       return false;
     }
@@ -128,7 +128,7 @@ public class KnightBoard{
     return true;
   }
 
-  private boolean removeKnight(int row, int col){
+  private boolean removeKnight(int row, int col){ // removing a knight at a row and column
     if(board[row][col] == 0){return false;}
     board[row][col] = 0;
     level--;
