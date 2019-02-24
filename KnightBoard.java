@@ -173,7 +173,7 @@ public class KnightBoard{
     int num2 = 0;
     boolean taken1 = true;
     boolean taken2 = true;
-    while(taken1){
+    while(taken1){ // while loop to properly collect the dimensions of the board
     try{
     System.out.println("Input a length: ");
 	  num1 = in.nextInt();
@@ -207,7 +207,7 @@ public class KnightBoard{
     System.out.println("8. Find total number of Solutions");
     System.out.println("9. Exit");
     System.out.println("------------------------------");
-    int option = in.nextInt();
+    int option = in.nextInt(); // initial option chosen, new options asked for after every action is complete!
     boolean running = true;
     while(running){
     try{
