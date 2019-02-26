@@ -170,6 +170,14 @@ public class KnightBoard{
     return result;
   }
 
+  private static void runProcess(String command) throws Exception {
+        Process pro = Runtime.getRuntime().exec(command);
+        printLines(command + " stdout:", pro.getInputStream());
+        printLines(command + " stderr:", pro.getErrorStream());
+        pro.waitFor();
+        System.out.println(command + " exitValue() " + pro.exitValue());
+      }
+
   public static void main(String[] args){ // this is where the program runs
     Scanner in = new Scanner(System.in);
     System.out.println("If you wish to run a driver file press &. Otherwise press %");
