@@ -316,7 +316,8 @@ public class KnightBoard{
       option = in.nextInt();
     }
     else if(option == 8){
-      System.out.println("Not Yet Ready!");
+      int num = puzzle.CountAllSolutions();
+      System.out.println(num);
       System.out.println("Chose another Option: ");
       option = in.nextInt();
     }
