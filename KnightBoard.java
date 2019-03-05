@@ -107,6 +107,8 @@ public class KnightBoard{
     if(position == length*width){
       Solutions++;
     }
+    int rowChange = row + moves[0];
+    int colChange = col + moves[1];
     int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };
     for(int i = 0; i < moves.length; i++){
       if(inBounds(row+ move[0]) && inBounds(col+ move[1])){
