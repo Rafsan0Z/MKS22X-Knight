@@ -314,7 +314,12 @@ public class KnightBoard{
       option = in.nextInt();
   	}
     else if(option == 5){
-      System.out.println("Not Yet Ready!");
+      if(puzzle.solve(0,0)){
+        System.out.println("Yes It is Solvable");
+      }
+      else{
+        System.out.println("No It is not Solvable");
+      }
       System.out.println("Chose another Option: ");
       option = in.nextInt();
     }
