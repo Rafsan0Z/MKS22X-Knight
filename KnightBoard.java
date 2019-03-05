@@ -130,7 +130,10 @@ public class KnightBoard{
   }
 
   private boolean solveHelper(int row, int col, int x, int y, int level){
-    return false;
+    board[row][col] = level;
+    if(level = length*width){
+      return true;
+    }
   }
 
   private boolean addKnight(int row, int col){ // adding a knight at a row and column
