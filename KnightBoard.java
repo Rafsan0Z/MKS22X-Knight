@@ -95,7 +95,7 @@ public class KnightBoard{
   }
 
   public boolean solve(int startingrow, int startingcol){
-    return true;
+    return solveHelper(startingrow,startingcol,0,0,1);
   }
 
   public int countSolutions(int startingrow, int startingcol){
@@ -129,7 +129,7 @@ public class KnightBoard{
     return counter;
   }
 
-  private boolean solveHelper(int row, int col, int level, int x, int y){
+  private boolean solveHelper(int row, int col, int x, int y, int level){
     return false;
   }
 
