@@ -134,7 +134,14 @@ public class KnightBoard{
     if(level = length*width){
       return true;
     }
-    int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };    
+    int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };
+    for(int i = 0 ; i < moves.length; i++){
+      int rowChange = row + moves[i][0];
+      int colChange = col + moves[i][1];
+      if(inBounds(rowChange,colChange) && board[rowChange][colChange] == 0){
+        return true;
+      }
+    }
     board[row][col] = 0;
     return false;
   }
