@@ -113,6 +113,7 @@ public class KnightBoard{
     for(int i = 0; i < moves.length; i++){
       if(inBounds(rowChange) && inBounds(colChange) && board[rowChange][colChange] == 0){
         board[row][col] = position;
+        counterHelper(position+1,rowChange,colChange);
         board[row][col] = 0;
       }
     }
