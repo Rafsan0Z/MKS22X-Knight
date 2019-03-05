@@ -129,7 +129,7 @@ public class KnightBoard{
     return counter;
   }
 
-  private boolean solveHelper(int row, int col, int level){
+  private boolean solveHelper(int row, int col, int level, int x, int y){
     return false;
   }
 
