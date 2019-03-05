@@ -107,6 +107,7 @@ public class KnightBoard{
     if(position == length*width){
       Solutions++;
     }
+    int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };
   }
 
   public int CountAllSolutions(){
