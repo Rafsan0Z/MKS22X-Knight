@@ -108,6 +108,11 @@ public class KnightBoard{
       Solutions++;
     }
     int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };
+    for(int i = 0; i < moves.length; i++){
+      if(inBounds(row+ move[0]) && inBounds(col+ move[1])){
+
+      }
+    }
   }
 
   public int CountAllSolutions(){
