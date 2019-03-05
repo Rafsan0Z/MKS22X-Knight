@@ -134,6 +134,8 @@ public class KnightBoard{
     if(level = length*width){
       return true;
     }
+    board[row][col] = 0;
+    return false;
   }
 
   private boolean addKnight(int row, int col){ // adding a knight at a row and column
