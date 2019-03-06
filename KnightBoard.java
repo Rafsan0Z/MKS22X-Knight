@@ -107,7 +107,7 @@ public class KnightBoard{
     if(position == length*width){
       Solutions++;
     }
-    int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };
+    int[][] moves = new int[][] { {1,2} , {1,-2}, {-1,2}, {-1,-2}, {2,1}, {2,-1}, {-2,1}, {-2,-1} };
     for(int i = 0; i < moves.length; i++){
       int rowChange = row + moves[i][0];
       int colChange = col + moves[i][1];
@@ -135,7 +135,7 @@ public class KnightBoard{
       board[row][col] = level;
       return true;
     }
-    int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };
+    int[][] moves = new int[][] { {1,2} , {1,-2}, {-1,2}, {-1,-2}, {2,1}, {2,-1}, {-2,1}, {-2,-1} };
     for(int i = 0 ; i < moves.length && (x != -moves[i][0] || y != -moves[i][1]); i++){
       int rowChange = row + moves[i][0];
       int colChange = col + moves[i][1];
