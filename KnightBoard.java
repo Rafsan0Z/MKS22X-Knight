@@ -132,6 +132,7 @@ public class KnightBoard{
   private boolean solveHelper(int row, int col, int x, int y, int level){
     board[row][col] = level;
     if(level == length*width){
+      board[row][col] = level;
       return true;
     }
     int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };
