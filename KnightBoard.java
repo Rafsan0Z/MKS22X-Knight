@@ -136,9 +136,12 @@ public class KnightBoard{
       return true;
     }
     int[][] moves = new int[][] { {1,0} , {-1,0}, {0,1}, {0,-1} };
-    for(int i = 0 ; i < moves.length; i++){
+    for(int i = 0 ; i < moves.length && (x != -moves[i][0] || y != -moves[i][1]); i++){
       int rowChange = row + moves[i][0];
       int colChange = col + moves[i][1];
+      if(inBounds(rowChange,colChange) && (board[rowChange][colChange])){
+        return solveHelper(rowChange,colChange,moves[i][0],moves[i][1],level+1);
+      }
     }
     board[row][col] = 0;
     return false;
