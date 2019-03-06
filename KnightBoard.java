@@ -72,7 +72,9 @@ public class KnightBoard{
 
   public void counterHelper(int position, int row, int col){
     if(position == length*width){
+      board[row][col] = 0;
       Solutions++;
+      return true;
     }
     int[][] moves = new int[][] { {1,2} , {1,-2}, {-1,2}, {-1,-2}, {2,1}, {2,-1}, {-2,1}, {-2,-1} };
     for(int i = 0; i < moves.length; i++){
