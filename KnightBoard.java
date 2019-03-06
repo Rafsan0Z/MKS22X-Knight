@@ -61,39 +61,6 @@ public class KnightBoard{
     return output;
   }
 
-  private void KnightMove(int row, int col, String direction){
-    if(direction.equals("upright")){
-      int newrow = row - 3;
-      int newcol = col + 1;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
-    }
-    else if(direction.equals("downright")){
-      int newrow = row + 3;
-      int newcol = col + 1;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
-    }
-    else if(direction.equals("upleft")){
-      int newrow = row - 3;
-      int newcol = col - 1;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
-    }
-    else if(direction.equals("downleft")){
-      int newrow = row + 3;
-      int newcol = col - 1;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
-    }
-    else if(direction.equals("rightup")){
-      int newrow = row - 1;
-      int newcol = col + 3;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
-    }
-    else if(direction.equals("rightdown")){
-      int newrow = row + 1;
-      int newcol = col + 3;
-      if(inBounds(newrow,newcol)){board[newrow][newcol] = level+1;}
-    }
-  }
-
   public boolean solve(int startingrow, int startingcol){
     return solveHelper(startingrow,startingcol,0,0,1);
   }
