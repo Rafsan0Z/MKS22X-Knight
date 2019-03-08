@@ -39,17 +39,6 @@ public class KnightBoard{
     return level;
   }
 
-  private void MarkUp(int row, int col){
-    if(inBounds(row-1,col+3)){Marks[row-1][col+3] += 1;}
-    else if(inBounds(row-1,col-3)){Marks[row-1][col-3] += 1;}
-    else if(inBounds(row-3,col+1)){Marks[row-3][col+1] += 1;}
-    else if(inBounds(row-3,col-1)){Marks[row-3][col-1] += 1;}
-    else if(inBounds(row+1,col+3)){Marks[row+1][col+3] += 1;}
-    else if(inBounds(row+1,col-3)){Marks[row+1][col-3] += 1;}
-    else if(inBounds(row+3,col+1)){Marks[row+3][col+1] += 1;}
-    else if(inBounds(row+3,col-1)){Marks[row+3][col-1] += 1;}
-  }
-
   // Make sure that there is a Knight in given position
   private String MoveCoordinates(int row, int col){
     ArrayList<Integer> result = new ArrayList<Integer>();
