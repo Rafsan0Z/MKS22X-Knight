@@ -39,17 +39,6 @@ public class KnightBoard{
     return level;
   }
 
-  // Make sure that there is a Knight in given position
-  private String MoveCoordinates(int row, int col){
-    ArrayList<Integer> result = new ArrayList<Integer>();
-    String output = "";
-    for(int i = 0; i <= result.size(); i++){
-      String coordinate = "(" + result.get(i) + ", " + result.get(i+1) + ")";
-      output += coordinate + " ";
-    }
-    return output;
-  }
-
   public boolean solve(int startingrow, int startingcol){
     return solveHelper(startingrow,startingcol,0,0,1);
   }
@@ -129,7 +118,7 @@ public class KnightBoard{
       }
     }
   }
-  
+
   public String toString(){ // Marked by integers for knight
     String result = "";
     for(int i = 0; i < length; i++){
