@@ -70,7 +70,7 @@ public class KnightBoard{
     return Solutions;
   }
 
-  public void counterHelper(int position, int row, int col){
+  public boolean counterHelper(int position, int row, int col){
     if(position == length*width){
       board[row][col] = 0;
       Solutions++;
@@ -86,6 +86,7 @@ public class KnightBoard{
         board[row][col] = 0;
       }
     }
+    return false;
   }
 
   public int CountAllSolutions(){
@@ -163,165 +164,4 @@ public class KnightBoard{
     }
     return result;
   }
-
-  private static void printLines(String cmd, InputStream ins) throws Exception {
-        String line = null;
-        BufferedReader in = new BufferedReader(
-            new InputStreamReader(ins));
-        while ((line = in.readLine()) != null) {
-            System.out.println(cmd + " " + line);
-        }
-      }
-
-  private static void runProcess(String command) throws Exception {
-        Process pro = Runtime.getRuntime().exec(command);
-        printLines(command + " stdout:", pro.getInputStream());
-        printLines(command + " stderr:", pro.getErrorStream());
-        pro.waitFor();
-        System.out.println(command + " exitValue() " + pro.exitValue());
-      }
-
-  public static void main(String[] args){ // this is where the program runs
-    Scanner in = new Scanner(System.in);
-    System.out.println("If you wish to run a driver file press &. Otherwise press %");
-    String func = in.nextLine();
-    if(func.equals("&")){
-      System.out.println("Make sure that the file is inside the directory!");
-      System.out.println("_______________________________");
-      System.out.println("Please input the path from the file explorer");
-      String path = in.nextLine();
-      File file = new File(path);
-      if(file.exists()){
-        System.out.println("Thank you!");
-        try {
-            runProcess("pwd");
-            System.out.println("**********");
-            runProcess("javac -cp src src/com/journaldev/files/Test.java");
-            System.out.println("**********");
-            runProcess("java -cp src com/journaldev/files/Test Hi Pankaj");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-      }
-      else{
-        System.out.println("Sorry, the path is incorrect or the file does not exist!");
-      }
-    }
-    int num1 = 0;
-    int num2 = 0;
-    boolean taken1 = true;
-    boolean taken2 = true;
-    while(taken1){ // while loop to properly collect the dimensions of the board
-    try{
-    System.out.println("Input a length: ");
-	  num1 = in.nextInt();
-    taken1 = false;
-  }catch(InputMismatchException e){
-     System.out.println("Please input a number!");
-     in.next();
-   }
- }
- while(taken2){
-   try{
-   System.out.println("Input a width: ");
-   num2 = in.nextInt();
-   taken2 = false;
-  }catch(InputMismatchException e){
-     System.out.println("Please input a number!");
-     in.next();
-   }
- }
-    KnightBoard puzzle = new KnightBoard(num1,num2);
-    System.out.println("Welcome to KnightBoard!!!");
-    System.out.println("------------------------------");
-    System.out.println("Chose one of the following options: ");
-    System.out.println("1. Print the puzzle with numbers");
-    System.out.println("2. Print the puzzle with letters");
-    System.out.println("3. Add a Knight");
-    System.out.println("4. Remove a Knight");
-    System.out.println("5. Find a tour");
-    System.out.println("6. Find a semi-magic tour");
-    System.out.println("7. Find a magic tour");
-    System.out.println("8. Find total number of Solutions");
-    System.out.println("9. Exit");
-    System.out.println("------------------------------");
-    int option = in.nextInt(); // initial option chosen, new options asked for after every action is complete!
-    boolean running = true;
-    while(running){
-    try{
-      if(option == 1){
-  		String output = puzzle.toString();
-      System.out.println(output);
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-  	}
-    if(option == 2){
-      String output = puzzle.MarkstoString();
-      System.out.println(output);
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-    }
-    else if(option == 3){
-  		System.out.println("Input a row number: ");
-  		int row = in.nextInt() - 1;
-  		System.out.println("Input a column number: ");
-  		int col = in.nextInt() - 1;
-  		if(!puzzle.addKnight(row,col)){
-        System.out.println("Knight Already There!");
-      }
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-  	}
-    else if(option == 4){
-  		System.out.println("Input a row number: ");
-  		int row = in.nextInt() - 1;
-  		System.out.println("Input a column number: ");
-  		int col = in.nextInt() - 1;
-  		if(!puzzle.removeKnight(row,col)){
-        System.out.println("No Knight There!");
-      }
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-  	}
-    else if(option == 5){
-      if(puzzle.solve(0,0)){
-        System.out.println("Yes It is Solvable");
-      }
-      else{
-        System.out.println("No It is not Solvable");
-      }
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-    }
-    else if(option == 6){
-      System.out.println("Not Yet Ready!");
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-    }
-    else if(option == 7){
-      System.out.println("Not Yet Ready!");
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-    }
-    else if(option == 8){
-      int num = puzzle.CountAllSolutions();
-      System.out.println(num);
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-    }
-    else if(option == 9){
-      running = false;
-    }
-    else{
-      System.out.println("Invalid option!");
-      System.out.println("Chose another Option: ");
-      option = in.nextInt();
-    }
-  }catch(InputMismatchException e){
-    System.out.println("Please input a number!");
-    in.next();
-  }
-  }
-
-}
 }
