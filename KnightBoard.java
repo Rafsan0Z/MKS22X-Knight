@@ -129,19 +129,7 @@ public class KnightBoard{
       }
     }
   }
-
-  public String MarkstoString(){ // Marked by letter N for knight
-    String result = "";
-    for(int i = 0; i < length; i++){
-      for(int j = 0; j < width; j++){
-        if(board[i][j] == 0){result += "__ ";}
-        else{result += "N" + " ";}
-      }
-      result += "\n";
-    }
-    return result;
-  }
-
+  
   public String toString(){ // Marked by integers for knight
     String result = "";
     for(int i = 0; i < length; i++){
