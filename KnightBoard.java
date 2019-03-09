@@ -74,7 +74,7 @@ public class KnightBoard{
     return counter;
   }
 
-  private boolean solveHelper(int row, int col, int x, int y, int level){
+  private boolean solveHelper(int row, int col, int vert, int horz, int level){
     board[row][col] = level;
     if(level == length*width){
       board[row][col] = level;
