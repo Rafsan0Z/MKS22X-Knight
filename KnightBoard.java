@@ -106,6 +106,7 @@ public class KnightBoard{
   }
 
   private boolean addKnight(int row, int col){ // adding a knight at a row and column
+    if(!inBounds(row,col)){return false;}
     if(board[row][col] != 0){
       return false;
     }
@@ -115,6 +116,7 @@ public class KnightBoard{
   }
 
   private boolean removeKnight(int row, int col){ // removing a knight at a row and column
+    if(!inBounds(row,col)){return false;}
     if(board[row][col] == 0){return false;}
     board[row][col] = 0;
     level--;
@@ -143,7 +145,7 @@ public class KnightBoard{
 
   public static void main(String[] args){
 
-    KnightBoard kn = new KnightBoard(8,8);
+    KnightBoard kn = new KnightBoard(5,5);
     int row = Integer.parseInt(args[0]);
     int col = Integer.parseInt(args[1]);
     System.out.println(kn.solve(row,col));
