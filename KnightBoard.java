@@ -6,7 +6,6 @@ import java.io.*;
 public class KnightBoard{
 
   private int[][] board;
-  private int[][] Marks;
   private int[][] Moves;
   private int length;
   private int width;
