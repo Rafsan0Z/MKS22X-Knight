@@ -88,11 +88,12 @@ public class KnightBoard{
   }
 
   private boolean solveHelper(int row, int col, int level){
-    board[row][col] = level;
     if(level == length*width){
       board[row][col] = level;
       return true;
     }
+    board[row][col] = level;
+
     int[][] moves = new int[][] { {1,2} , {1,-2}, {-1,2}, {-1,-2}, {2,1}, {2,-1}, {-2,1}, {-2,-1} };
     for(int i = 0 ; i < moves.length; i++){
       int rowChange = row + moves[i][0];
@@ -103,7 +104,7 @@ public class KnightBoard{
         removeKnight(rowChange,colChange);
       }*/
       if(inBounds(rowChange,colChange) && board[rowChange][colChange] == 0){
-        return solveHelper(rowChange,colChange,level+1);
+        if(solveHelper(rowChange,colChange,level+1)){return true;}
       }
     }
     board[row][col] = 0;
