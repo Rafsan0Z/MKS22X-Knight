@@ -12,13 +12,13 @@ public class KnightBoard{
   private int level;
   private int Solutions;
 
-  public KnightBoard(int startingrow, int startingcol){ // constructor
-    if(startingrow < 0 || startingcol < 0){
+  public KnightBoard(int row, int col){ // constructor
+    if(row < 0 || col < 0){
       throw new IllegalArgumentException();
     }
-    board = new int[startingrow][startingcol];
-    length = startingrow;
-    width = startingcol;
+    board = new int[row][col];
+    length = row;
+    width = col;
   }
 
   private void setMoves(){
