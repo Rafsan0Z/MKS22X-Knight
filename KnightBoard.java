@@ -98,11 +98,6 @@ public class KnightBoard{
     for(int i = 0 ; i < moves.length; i++){
       int rowChange = row + moves[i][0];
       int colChange = col + moves[i][1];
-    /*  boolean check = addKnight(rowChange,colChange) && solveHelper(rowChange,colChange,level);
-      if(check){return true;}
-      else{
-        removeKnight(rowChange,colChange);
-      }*/
       if(inBounds(rowChange,colChange) && board[rowChange][colChange] == 0){
         if(solveHelper(rowChange,colChange,level+1)){return true;}
       }
