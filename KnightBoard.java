@@ -37,6 +37,9 @@ public class KnightBoard{
   }
 
   public boolean solve(int startingrow, int startingcol){
+    if(!inBounds(startingrow,startingcol)){
+      throw new IllegalArgumentException();
+    }
     return solveHelper(startingrow,startingcol,0,0,1);
   }
 
