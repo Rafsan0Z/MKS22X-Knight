@@ -42,7 +42,7 @@ public class KnightBoard{
         if(board[i][j] != 0){throw new IllegalArgumentException();}
       }
     }
-    return solveHelper(startingrow,startingcol,0,0,1);
+    return solveHelper(startingrow,startingcol,1);
   }
 
   public int countSolutions(int startingrow, int startingcol){
@@ -87,18 +87,18 @@ public class KnightBoard{
     return counter;
   }
 
-  private boolean solveHelper(int row, int col, int vert, int horz, int level){
+  private boolean solveHelper(int row, int col, int level){
     board[row][col] = level;
     if(level == length*width){
       board[row][col] = level;
       return true;
     }
     int[][] moves = new int[][] { {1,2} , {1,-2}, {-1,2}, {-1,-2}, {2,1}, {2,-1}, {-2,1}, {-2,-1} };
-    for(int i = 0 ; i < moves.length && (vert != -moves[i][0] || horz != -moves[i][1]); i++){
+    for(int i = 0 ; i < moves.length; i++){
       int rowChange = row + moves[i][0];
       int colChange = col + moves[i][1];
       if(inBounds(rowChange,colChange) && board[rowChange][colChange] == 0){
-        return solveHelper(rowChange,colChange,moves[i][0],moves[i][1],level+1);
+        return solveHelper(rowChange,colChange,level+1);
       }
     }
     board[row][col] = 0;
@@ -144,7 +144,7 @@ public class KnightBoard{
   public static void main(String[] args){
 
     KnightBoard kn = new KnightBoard(8,8);
-    kn.solve(1,0);
+    System.out.println(kn.solve(0,0));
     System.out.println(kn);
 
   }
