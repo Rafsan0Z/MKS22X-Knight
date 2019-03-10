@@ -39,6 +39,11 @@ public class KnightBoard{
     if(!inBounds(startingrow,startingcol)){
       throw new IllegalArgumentException();
     }
+    for(int i = 0; i < length; i++){
+      for(int j = 0; j < width; j++){
+        if(board[i][j] != 0){throw new IllegalArgumentException();}
+      }
+    }
     return solveHelper(startingrow,startingcol,0,0,1);
   }
 
