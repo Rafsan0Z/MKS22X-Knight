@@ -44,6 +44,9 @@ public class KnightBoard{
   }
 
   public int countSolutions(int startingrow, int startingcol){
+    if(!inBounds(startingrow,startingcol)){
+      throw new IllegalArgumentException();
+    }
     counterHelper(1,startingrow,startingcol);
     return Solutions;
   }
