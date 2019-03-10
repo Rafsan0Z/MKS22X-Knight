@@ -1,8 +1,6 @@
 //import java.util.IllegalArgumentException;
 import java.util.InputMismatchException;
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.*;
 public class KnightBoard{
 
   private int[][] board;
