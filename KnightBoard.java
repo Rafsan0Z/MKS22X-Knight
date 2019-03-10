@@ -144,7 +144,9 @@ public class KnightBoard{
   public static void main(String[] args){
 
     KnightBoard kn = new KnightBoard(8,8);
-    System.out.println(kn.solve(0,0));
+    int row = Integer.parseInt(args[0]);
+    int col = Integer.parseInt(args[1]);
+    System.out.println(kn.solve(row,col));
     System.out.println(kn);
 
   }
