@@ -81,7 +81,7 @@ public class KnightBoard{
       return true;
     }
     int[][] moves = new int[][] { {1,2} , {1,-2}, {-1,2}, {-1,-2}, {2,1}, {2,-1}, {-2,1}, {-2,-1} };
-    for(int i = 0 ; i < moves.length && (x != -moves[i][0] || y != -moves[i][1]); i++){
+    for(int i = 0 ; i < moves.length && (vert != -moves[i][0] || horz != -moves[i][1]); i++){
       int rowChange = row + moves[i][0];
       int colChange = col + moves[i][1];
       if(inBounds(rowChange,colChange) && board[rowChange][colChange] == 0){
@@ -127,4 +127,13 @@ public class KnightBoard{
     }
     return result;
   }
+
+  public static void main(String[] args){
+
+    KnightBoard kn = new KnightBoard(8,8);
+    kn.solve(1,0);
+    System.out.println(kn);
+
+  }
+
 }
