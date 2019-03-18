@@ -179,7 +179,9 @@ public class KnightBoard{
     System.out.println(kn.countSolutions(row,col));
     System.out.println(kn.solve(row,col));
     System.out.println(kn);
-    runTest(3);
+    for(int i = 0; i < 5; i++){
+    runTest(i);
+  }
 
   }
 
