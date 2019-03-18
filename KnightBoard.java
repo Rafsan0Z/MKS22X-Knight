@@ -11,7 +11,7 @@ public class KnightBoard{
   private int Solutions;
 
   public KnightBoard(int row, int col){ // constructor
-    if(row < 0 || col < 0){
+    if(row <= 0 || col <= 0){
       throw new IllegalArgumentException();
     }
     board = new int[row][col];
@@ -39,7 +39,7 @@ public class KnightBoard{
     }
     for(int i = 0; i < length; i++){
       for(int j = 0; j < width; j++){
-        if(board[i][j] != 0){throw new IllegalArgumentException();}
+        if(board[i][j] != 0){throw new IllegalStateException();}
       }
     }
     return solveHelper(startingrow,startingcol,1);
@@ -51,7 +51,7 @@ public class KnightBoard{
     }
     for(int i = 0; i < length; i++){
       for(int j = 0; j < width; j++){
-        if(board[i][j] != 0){throw new IllegalArgumentException();}
+        if(board[i][j] != 0){throw new IllegalStateException();}
       }
     }
     counterHelper(1,startingrow,startingcol);
