@@ -19,10 +19,6 @@ public class KnightBoard{
     width = col;
   }
 
-  private void setMoves(){
-
-  }
-
   private boolean inBounds(int row, int col){ // checks if the knight is inside the Board
     if(row >= length || col >= width){return false;}
     else if(row < 0 || col < 0){return false;}
